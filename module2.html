@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <hr>
+    <h2>Talking about form tag</h2>
+    <form name="signup" autocomplete="on" target="_blank" method="POST" action="#">
+        <!-- Name: validar os dados dps no js; 
+            Action: para onde os dados vão?
+            Method: GET(todos os campos que forem preenchidos aparecerão na url) e POST(quando envia os dados a página para de funcionar, logo é mais seguro); 
+            Target: cada atributo se comporta de um forma. o _blank abre uma nova página;
+            Autocomplete: se on, vai facilitar a nossa vida autocompletando informações que foram inseridas anteriormente. Se off, não fará nada disso;
+        -->
+        Name: <input type="text" name="name"/> <br>
+        Age: <input type="number" name="age"/> <br>
+        Password: <input type="password" name="password"/> <br>
+        <button type="submit">Send</button>
+    </form>
+    <hr>
+    <h2>Talking about input</h2>
+    <form>
+        Button: <input type="button" value="Send">
+        Checkbox: <input type="checkbox">
+        Color: <input type="color">
+        Date: <input type="date">
+        Datetime: <input type="datetime">
+        Datetime-local: <input type="datetime-local">
+        Email: <input type="email">
+        File: <input type="file">
+        Hidden: <input type="hidden">
+        Image: <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHZAq08u4YaR0Jsu2CgeptdxC74y-9QEeFYEAb6YHP&s">
+        Month: <input type="month">
+        Number: <input type="number" min="0" step="5" max="99"> <!-- min: numero mínimo; step: de qnts em qnts números o input vai pular na setinha; max: capacidade máxima aceita -->
+        Password: <input type="password">
+        Radio: <input type="radio">
+        Range: <input type="range">
+        Reset: <input type="reset">
+        Submit: <input type="submit">
+        Search: <input type="search">
+        Text: <input type="text">
+        Tel: <input type="tel">
+        Time: <input type="time">
+        Url: <input type="url">
+        Week: <input type="week">
+    </form>
+    <br>
+    <hr>
+    <h2>Talking about checkbox and radio</h2>
+    <form method="get">
+        <h3>You selected: pepperoni pizza</h3>
+        <p>What options do you want?</p>
+        <!-- Como o checkbox é utilizado para agrupar várias opções num mesmo lugar, colocar o name como array para agrupar todas as informações em apenas um lugar -->
+        <input type="checkbox" name="optional[]" value="queese"> + cheese
+        <input type="checkbox" name="optional[]" value="pepperoni"> + pepperoni
+        <input type="checkbox" name="optional[]" value="onion"> + onion
+        <input type="checkbox" name="optional[]" value="olive"> + olive
+        <p>Stuffed crust?</p>
+        <!-- Quando colocamos o mesmo valor em um "name", no caso do radio, apenas uma opção será levada em consideração -->
+        <input type="radio" name="border" value="yes"> Yes
+        <input type="radio" name="border" value="no"> No
+        <p>Drink?</p>
+        <input type="radio" name="drink" value="juice"> Juice
+        <input type="radio" name="drink" value="water"> Water
+        <input type="radio" name="drink" value="soda"> Soda
+        <input type="radio" name="drink" value="none"> None
+        <br><br>
+        <button type="submit">Order</button>
+    </form>
+    <hr>
+    <h2>Talking about button and your types</h2>
+    <form onsubmit="" method="get">
+        <label for="name">Name: </label> <input type="text" name="name" id="name">
+        <label for="age">Age: </label> <input type="number" name="age" id="age" min="1" max="50">
+        <label for="password">Password: </label> <input type="password" name="password" id="password">
+        <button type="button">Click</button> <!-- Botão clicável onde podemos inserir funções js -->
+        <button type="reset">Reset</button> <!-- Limpar -->
+        <button type="submit">Send</button> <!-- Envia os dados do formulário -->
+    </form>
+    <br>
+    <hr>
+    <h2>Talking about select and your types</h2>
+    <form method="get">
+        <label for="name">Name: </label> <input type="text" name="name" id="name">
+        <label for="role">Role: </label>
+        <select name="role" id="role"> <!-- Select box --> <!-- atributo mulitple, ctrl enquanto clica seleciona mais de uma opção do select enquanto o shift seleciona tudo de uma vez -->
+            <option value="">Select your role</option>
+            <option value="IT">Information Technology</option>
+            <option value="business">Business</option>
+            <option value="president">President</option>
+        </select>
+        <label for="subject">Subject: </label> <input type="subject" name="subject" id="subject">
+        <textarea name="message" id="message" cols="50" rows="5"></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <br>
+    <hr>
+    <h2>Talking about the fieldset and legend tags</h2>
+    <form>
+        <fieldset> <!-- A "margem" que vai envolver os inputs e labels -->
+            <legend>Enter your name here:</legend> <!-- O "nome" da seção da "margem" -->
+            <label for="name">Name: </label> <input type="text" name="name" id="name">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Enter your age here:</legend>
+            <label for="age">Age: </label> <input type="number" name="age" id="age" min="1" max="50">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Enter your password here:</legend>
+            <label for="password">Password: </label> <input type="password" name="password" id="password">
+        </fieldset>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
